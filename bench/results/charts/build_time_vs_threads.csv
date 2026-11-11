@@ -1,0 +1,5 @@
+system,threads,build_s
+vdb hnsw,1,61.34
+vdb hnsw,2,40.49
+vdb hnsw,4,28.40
+vdb hnsw,8,210.15

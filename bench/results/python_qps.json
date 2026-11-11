@@ -1,0 +1,65 @@
+{
+ "command": "python_qps",
+ "results": [
+  {
+   "system": "vdb-python",
+   "threads": 1,
+   "ef": 16,
+   "qps": 20482.78581619022
+  },
+  {
+   "system": "vdb-python",
+   "threads": 1,
+   "ef": 32,
+   "qps": 10204.296547637983
+  },
+  {
+   "system": "vdb-python",
+   "threads": 1,
+   "ef": 64,
+   "qps": 6014.395889598702
+  },
+  {
+   "system": "vdb-python",
+   "threads": 1,
+   "ef": 128,
+   "qps": 3214.1821751462558
+  },
+  {
+   "system": "vdb-python",
+   "threads": 1,
+   "ef": 256,
+   "qps": 1627.4864308441352
+  },
+  {
+   "system": "vdb-python",
+   "threads": 8,
+   "ef": 16,
+   "qps": 40383.430985108826
+  },
+  {
+   "system": "vdb-python",
+   "threads": 8,
+   "ef": 32,
+   "qps": 25454.68041059681
+  },
+  {
+   "system": "vdb-python",
+   "threads": 8,
+   "ef": 64,
+   "qps": 15843.677657272181
+  },
+  {
+   "system": "vdb-python",
+   "threads": 8,
+   "ef": 128,
+   "qps": 9286.515957465346
+  },
+  {
+   "system": "vdb-python",
+   "threads": 8,
+   "ef": 256,
+   "qps": 4816.839346666429
+  }
+ ]
+}

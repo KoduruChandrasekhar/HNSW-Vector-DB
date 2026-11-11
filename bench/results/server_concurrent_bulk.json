@@ -1,0 +1,20 @@
+{
+ "command": "server_load",
+ "results": [
+  {
+   "offered_qps": 1000,
+   "achieved_qps": 995.1135492991299,
+   "requests": 20000,
+   "codes": {
+    "200": 20000
+   },
+   "p50_ms": 5.689776999929563,
+   "p95_ms": 20.10441820002595,
+   "p99_ms": 36.799728299774856,
+   "system": "vdb-server",
+   "ef": 64,
+   "k": 10,
+   "segments": 1
+  }
+ ]
+}

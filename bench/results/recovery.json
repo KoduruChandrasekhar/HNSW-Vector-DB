@@ -1,0 +1,49 @@
+{
+ "command": "recovery",
+ "machine": {
+  "compiler": "15.2.0",
+  "cores": 8,
+  "cpu": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz",
+  "git_commit": "",
+  "kernels": "avx512",
+  "os": "Linux 6.6.87.2-microsoft-standard-WSL2",
+  "ram_kb": 8012000
+ },
+ "results": [
+  {
+   "kind": "log_replay",
+   "log_mb": 10,
+   "records": 18281,
+   "seconds": 0.020565468,
+   "system": "vdb"
+  },
+  {
+   "kind": "log_replay",
+   "log_mb": 100,
+   "records": 182815,
+   "seconds": 0.142405136,
+   "system": "vdb"
+  },
+  {
+   "kind": "log_replay",
+   "log_mb": 500,
+   "records": 914076,
+   "seconds": 0.714065996,
+   "system": "vdb"
+  },
+  {
+   "kind": "segment_open",
+   "rows": 200000,
+   "seconds": 0.034268832,
+   "system": "vdb",
+   "verify_crc": false
+  },
+  {
+   "kind": "segment_open",
+   "rows": 200000,
+   "seconds": 0.049487748,
+   "system": "vdb",
+   "verify_crc": true
+  }
+ ]
+}

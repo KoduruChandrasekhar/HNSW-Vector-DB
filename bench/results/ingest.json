@@ -1,0 +1,254 @@
+{
+ "command": "ingest",
+ "machine": {
+  "compiler": "15.2.0",
+  "cores": 8,
+  "cpu": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz",
+  "git_commit": "",
+  "kernels": "avx512",
+  "os": "Linux 6.6.87.2-microsoft-standard-WSL2",
+  "ram_kb": 8012000
+ },
+ "results": [
+  {
+   "batch": 1,
+   "p50_ms": 7.253247,
+   "p99_ms": 20.019341,
+   "sync": "always+group_commit",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 128.90259616552882,
+   "writers": 1
+  },
+  {
+   "batch": 100,
+   "p50_ms": 7.811959,
+   "p99_ms": 10.080657,
+   "sync": "always+group_commit",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 12732.369807428446,
+   "writers": 1
+  },
+  {
+   "batch": 1,
+   "p50_ms": 14.838446999999999,
+   "p99_ms": 20.334679,
+   "sync": "always+group_commit",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 577.7194512990039,
+   "writers": 8
+  },
+  {
+   "batch": 100,
+   "p50_ms": 15.016338000000001,
+   "p99_ms": 17.179116,
+   "sync": "always+group_commit",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 51136.91684482769,
+   "writers": 8
+  },
+  {
+   "batch": 1,
+   "p50_ms": 13.828709,
+   "p99_ms": 21.012871,
+   "sync": "always+group_commit",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 4607.75376930587,
+   "writers": 64
+  },
+  {
+   "batch": 100,
+   "p50_ms": 20.433902,
+   "p99_ms": 21.691876,
+   "sync": "always+group_commit",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 177547.35287771636,
+   "writers": 64
+  },
+  {
+   "batch": 1,
+   "p50_ms": 6.854063,
+   "p99_ms": 13.519401,
+   "sync": "always",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 140.74484772622193,
+   "writers": 1
+  },
+  {
+   "batch": 100,
+   "p50_ms": 7.4106559999999995,
+   "p99_ms": 9.635869,
+   "sync": "always",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 13403.575889748217,
+   "writers": 1
+  },
+  {
+   "batch": 1,
+   "p50_ms": 58.473060000000004,
+   "p99_ms": 72.979945,
+   "sync": "always",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 136.11870385901412,
+   "writers": 8
+  },
+  {
+   "batch": 100,
+   "p50_ms": 54.662743,
+   "p99_ms": 72.443737,
+   "sync": "always",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 13945.684966774388,
+   "writers": 8
+  },
+  {
+   "batch": 1,
+   "p50_ms": 500.148798,
+   "p99_ms": 546.4736879999999,
+   "sync": "always",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 128.80107924799393,
+   "writers": 64
+  },
+  {
+   "batch": 100,
+   "p50_ms": 121.632205,
+   "p99_ms": 286.978751,
+   "sync": "always",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 13807.42679671661,
+   "writers": 64
+  },
+  {
+   "batch": 1,
+   "p50_ms": 0.00104,
+   "p99_ms": 0.004554,
+   "sync": "interval",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 619090.1077913264,
+   "writers": 1
+  },
+  {
+   "batch": 100,
+   "p50_ms": 0.046527,
+   "p99_ms": 0.137295,
+   "sync": "interval",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 1612758.8578764321,
+   "writers": 1
+  },
+  {
+   "batch": 1,
+   "p50_ms": 0.139221,
+   "p99_ms": 0.729394,
+   "sync": "interval",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 40460.37063985517,
+   "writers": 8
+  },
+  {
+   "batch": 100,
+   "p50_ms": 0.767653,
+   "p99_ms": 1.111545,
+   "sync": "interval",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 999241.8252650801,
+   "writers": 8
+  },
+  {
+   "batch": 1,
+   "p50_ms": 1.027418,
+   "p99_ms": 4.8426290000000005,
+   "sync": "interval",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 50099.305591059965,
+   "writers": 64
+  },
+  {
+   "batch": 100,
+   "p50_ms": 4.018497,
+   "p99_ms": 5.6124160000000005,
+   "sync": "interval",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 538106.6260970144,
+   "writers": 64
+  },
+  {
+   "batch": 1,
+   "p50_ms": 0.001103,
+   "p99_ms": 0.0046029999999999995,
+   "sync": "none",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 572807.482698708,
+   "writers": 1
+  },
+  {
+   "batch": 100,
+   "p50_ms": 0.06865399999999999,
+   "p99_ms": 0.478187,
+   "sync": "none",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 941795.8398523263,
+   "writers": 1
+  },
+  {
+   "batch": 1,
+   "p50_ms": 0.141426,
+   "p99_ms": 0.683779,
+   "sync": "none",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 40400.325614504356,
+   "writers": 8
+  },
+  {
+   "batch": 100,
+   "p50_ms": 0.756061,
+   "p99_ms": 1.149,
+   "sync": "none",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 937215.4672417421,
+   "writers": 8
+  },
+  {
+   "batch": 1,
+   "p50_ms": 0.922782,
+   "p99_ms": 4.283111,
+   "sync": "none",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 54962.25480891561,
+   "writers": 64
+  },
+  {
+   "batch": 100,
+   "p50_ms": 3.2652750000000004,
+   "p99_ms": 4.363041,
+   "sync": "none",
+   "system": "vdb",
+   "vectors": 4000,
+   "vectors_per_s": 535318.5801317045,
+   "writers": 64
+  }
+ ]
+}

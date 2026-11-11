@@ -1,0 +1,9 @@
+layout,ef,recall@10,qps
+insertion order,16,0.7998,7695.8
+insertion order,32,0.9017,6042.8
+insertion order,64,0.9632,3684.6
+insertion order,128,0.9892,2101.5
+BFS-reordered,16,0.7999,10868.8
+BFS-reordered,32,0.9018,6999.5
+BFS-reordered,64,0.9632,4512.7
+BFS-reordered,128,0.9892,2495.5

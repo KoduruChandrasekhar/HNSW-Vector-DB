@@ -1,0 +1,14 @@
+build/
+out/
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+data/*
+!data/README.md
+corpus/
+rag/work/
+bench/results/*.tmp
+compile_commands.json
+.cache/

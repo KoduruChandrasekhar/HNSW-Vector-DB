@@ -1,0 +1,15 @@
+Checks: >
+  -*,
+  bugprone-*,
+  modernize-*,
+  performance-*,
+  -bugprone-easily-swappable-parameters,
+  -bugprone-narrowing-conversions,
+  -bugprone-implicit-widening-of-multiplication-result,
+  -modernize-use-trailing-return-type,
+  -modernize-avoid-c-arrays,
+  -modernize-use-nodiscard,
+  -modernize-macro-to-enum
+WarningsAsErrors: ''
+HeaderFilterRegex: '(include/vdb|src)/.*'
+FormatStyle: file

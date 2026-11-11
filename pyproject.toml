@@ -1,0 +1,32 @@
+[build-system]
+requires = ["scikit-build-core>=0.10", "nanobind>=2.4"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "vdb"
+version = "0.1.0"
+description = "A vector database in C++20: HNSW, product quantization, WAL, filtered search"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22"]
+
+[project.optional-dependencies]
+bench = ["h5py", "pandas", "matplotlib", "hnswlib", "faiss-cpu"]
+test = ["pytest", "httpx"]
+rag = ["sentence-transformers", "datasets", "httpx"]
+
+[tool.scikit-build]
+cmake.build-type = "Release"
+wheel.packages = ["python/vdb"]
+build-dir = "build/{wheel_tag}"
+
+[tool.scikit-build.cmake.define]
+VDB_BUILD_PYTHON = "ON"
+VDB_BUILD_TESTS = "OFF"
+VDB_BUILD_BENCHMARKS = "OFF"
+VDB_BUILD_SERVER = "OFF"
+VDB_BUILD_TOOLS = "OFF"
+VDB_WERROR = "OFF"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

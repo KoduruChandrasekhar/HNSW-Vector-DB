@@ -1,0 +1,118 @@
+{
+ "command": "mutable",
+ "machine": {
+  "compiler": "15.2.0",
+  "cores": 8,
+  "cpu": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz",
+  "git_commit": "",
+  "kernels": "avx512",
+  "os": "Linux 6.6.87.2-microsoft-standard-WSL2",
+  "ram_kb": 8011996
+ },
+ "results": [
+  {
+   "dist_comps": 1108.217,
+   "flush_s": 0.0,
+   "k": 10,
+   "label": "0 rows in the mutable segment",
+   "mutable_mb": 0.0,
+   "mutable_rows": 0,
+   "p50_ms": 0.137558,
+   "p95_ms": 0.342974,
+   "p99_ms": 0.45706199999999997,
+   "qps": 5686.572996905515,
+   "recall@1": 0.769,
+   "recall@10": 0.6895999999999994,
+   "segments_after_flush": 1,
+   "system": "vdb"
+  },
+  {
+   "alternative": {
+    "flat_p50_ms": 0.072037,
+    "hnsw_insert_us_per_row": 99.576263,
+    "hnsw_p50_ms": 0.037084,
+    "hnsw_recall_vs_flat": 0.9991
+   },
+   "dist_comps": 6108.292,
+   "flush_s": 0.226945726,
+   "k": 10,
+   "label": "5000 rows in the mutable segment",
+   "mutable_mb": 2.56,
+   "mutable_rows": 5000,
+   "p50_ms": 0.217463,
+   "p95_ms": 0.356935,
+   "p99_ms": 0.52307,
+   "qps": 4124.255469812376,
+   "recall@1": 0.786,
+   "recall@10": 0.7060999999999996,
+   "segments_after_flush": 2,
+   "system": "vdb"
+  },
+  {
+   "alternative": {
+    "flat_p50_ms": 0.133756,
+    "hnsw_insert_us_per_row": 135.7706188,
+    "hnsw_p50_ms": 0.044016,
+    "hnsw_recall_vs_flat": 0.9968
+   },
+   "dist_comps": 11108.287,
+   "flush_s": 0.630069175,
+   "k": 10,
+   "label": "10000 rows in the mutable segment",
+   "mutable_mb": 5.12,
+   "mutable_rows": 10000,
+   "p50_ms": 0.401532,
+   "p95_ms": 0.768343,
+   "p99_ms": 1.092705,
+   "qps": 2216.84424183897,
+   "recall@1": 0.807,
+   "recall@10": 0.7240999999999994,
+   "segments_after_flush": 2,
+   "system": "vdb"
+  },
+  {
+   "alternative": {
+    "flat_p50_ms": 0.636542,
+    "hnsw_insert_us_per_row": 245.69787745,
+    "hnsw_p50_ms": 0.08570699999999999,
+    "hnsw_recall_vs_flat": 0.9966
+   },
+   "dist_comps": 21108.547,
+   "flush_s": 1.219197264,
+   "k": 10,
+   "label": "20000 rows in the mutable segment",
+   "mutable_mb": 10.24,
+   "mutable_rows": 20000,
+   "p50_ms": 1.1796879999999998,
+   "p95_ms": 2.241182,
+   "p99_ms": 3.834685,
+   "qps": 763.0656845140395,
+   "recall@1": 0.828,
+   "recall@10": 0.7545999999999982,
+   "segments_after_flush": 2,
+   "system": "vdb"
+  },
+  {
+   "alternative": {
+    "flat_p50_ms": 2.798188,
+    "hnsw_insert_us_per_row": 297.87757672000004,
+    "hnsw_p50_ms": 0.131292,
+    "hnsw_recall_vs_flat": 0.9842
+   },
+   "dist_comps": 101109.326,
+   "flush_s": 9.887503981,
+   "k": 10,
+   "label": "100000 rows in the mutable segment",
+   "mutable_mb": 51.2,
+   "mutable_rows": 100000,
+   "p50_ms": 4.749891,
+   "p95_ms": 9.075270999999999,
+   "p99_ms": 15.679984000000001,
+   "qps": 190.63037024994745,
+   "recall@1": 0.98,
+   "recall@10": 0.9861999999999984,
+   "segments_after_flush": 2,
+   "system": "vdb"
+  }
+ ]
+}

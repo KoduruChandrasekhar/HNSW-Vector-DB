@@ -1,0 +1,9 @@
+phase,deleted_pct,recall@10,p50_ms
+before compaction,0,0.9801,0.117
+before compaction,10,0.9827,0.134
+before compaction,30,0.9894,0.153
+before compaction,50,0.9945,0.194
+after compaction,0,0.9801,0.107
+after compaction,10,0.9827,0.121
+after compaction,30,0.9860,0.105
+after compaction,50,0.9853,0.097

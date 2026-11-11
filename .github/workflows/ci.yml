@@ -1,0 +1,103 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  asan:
+    name: Linux Debug + ASan/UBSan (all tests)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y ninja-build
+      - run: cmake --preset asan
+      - run: cmake --build --preset asan -j4
+      - run: ctest --preset asan -j4
+        env:
+          ASAN_OPTIONS: detect_leaks=1
+          UBSAN_OPTIONS: print_stacktrace=1
+
+  tsan:
+    name: Linux TSan (concurrency and stress)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y ninja-build
+      - run: cmake --preset tsan
+      - run: cmake --build --preset tsan -j4
+      - name: stress test (60 s) and the multi-threaded suites
+        run: |
+          cd build/tsan
+          VDB_STRESS_SECONDS=60 ./tests/concurrency_test
+          ./tests/compaction_test
+          ./tests/server_test
+        env:
+          TSAN_OPTIONS: halt_on_error=1 second_deadlock_stack=1
+
+  release:
+    name: Linux Release (recall regression, crash harness, Python, fuzzing)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y ninja-build clang
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/cache@v4
+        id: data
+        with: { path: data, key: data-sift-100k-v1 }
+      - run: pip install numpy h5py pytest httpx
+      - run: cmake --preset release
+      - run: cmake --build --preset release -j4
+      - name: cached 100k SIFT subset
+        if: steps.data.outputs.cache-hit != 'true'
+        run: |
+          python tools/convert_hdf5.py --download sift --data-dir data
+          build/release/vdb_bench subset --data-dir data --dataset sift --n 100000 --name sift-100k --max-query 1000
+          rm -rf data/sift data/*.hdf5
+      - run: ctest --preset release -j4
+        env: { VDB_DATA_DIR: data }
+      - name: kill -9 crash harness (short run; the full 1,000 iterations run overnight)
+        run: python tools/crash_test.py --server build/release/vdb-server --iterations 30 --max-delay 1
+      - name: Python package and API tests
+        run: |
+          pip install .
+          VDB_SERVER=build/release/vdb-server pytest -q tests/test_python.py tests/api_test.py
+      - name: fuzz each parser for 60 s
+        run: |
+          cmake --preset fuzz
+          cmake --build --preset fuzz -j4
+          for f in wal_fuzz manifest_fuzz filter_fuzz binary_upsert_fuzz; do
+            mkdir -p corpus/$f
+            build/fuzz/tests/fuzz/$f -max_total_time=60 -rss_limit_mb=2048 corpus/$f
+          done
+
+  macos:
+    name: macOS (NEON kernels, Python package)
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew install ninja
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: cmake --preset release
+      - run: cmake --build --preset release -j3
+      - run: ctest --preset release -j3 -E "concurrency"
+      - run: |
+          pip install numpy pytest .
+          pytest -q tests/test_python.py
+
+  lint:
+    name: clang-format and clang-tidy
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y ninja-build clang-format clang-tidy
+      - run: clang-format --dry-run --Werror $(git ls-files 'src/*.cc' 'src/*.h' 'include/*.h' 'tools/*.cc')
+        continue-on-error: true  # report formatting drift without blocking
+      - run: cmake --preset debug -DVDB_BUILD_TESTS=OFF
+      - run: clang-tidy -p build/debug --quiet $(git ls-files 'src/*.cc') 2>&1 | tail -50

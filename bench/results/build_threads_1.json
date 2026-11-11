@@ -1,0 +1,40 @@
+{
+ "command": "index",
+ "machine": {
+  "compiler": "15.2.0",
+  "cores": 8,
+  "cpu": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz",
+  "git_commit": "",
+  "kernels": "avx512",
+  "os": "Linux 6.6.87.2-microsoft-standard-WSL2",
+  "ram_kb": 8011984
+ },
+ "results": [
+  {
+   "build_s": 61.337452202,
+   "build_threads": 1,
+   "bytes_per_vector": 672.6564,
+   "dataset": "sift",
+   "dist_comps": 1108.922,
+   "index": "hnsw",
+   "index_bytes": 32131280,
+   "k": 10,
+   "label": "hnsw {\"M\":16,\"ef\":64,\"efc\":200}",
+   "p50_ms": 0.117236,
+   "p95_ms": 0.19275,
+   "p99_ms": 0.277053,
+   "params": {
+    "M": 16,
+    "ef": 64,
+    "efc": 200
+   },
+   "qps": 8041.30102267819,
+   "recall@1": 0.993,
+   "recall@10": 0.980399999999998,
+   "repaired_links": 0,
+   "run": 0,
+   "system": "vdb",
+   "threads": 1
+  }
+ ]
+}

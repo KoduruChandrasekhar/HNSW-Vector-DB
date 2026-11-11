@@ -1,0 +1,434 @@
+{
+ "command": "filter",
+ "machine": {
+  "compiler": "15.2.0",
+  "cores": 8,
+  "cpu": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz",
+  "git_commit": "",
+  "kernels": "avx512",
+  "os": "Linux 6.6.87.2-microsoft-standard-WSL2",
+  "ram_kb": 8012000
+ },
+ "results": [
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 10.0,
+   "ef": 64,
+   "k": 10,
+   "label": "planner sel=0.000050",
+   "p50_ms": 0.002098,
+   "p95_ms": 0.002293,
+   "p99_ms": 0.002762,
+   "qps": 459311.6480056,
+   "recall@1": 1.0,
+   "recall@10": 1.0,
+   "selectivity": 5e-05,
+   "strategies_used": {
+    "prefilter_exact": 2000
+   },
+   "strategy": "planner",
+   "system": "vdb",
+   "threshold": 1
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 10.0,
+   "ef": 64,
+   "k": 10,
+   "label": "prefilter sel=0.000050",
+   "p50_ms": 0.00436,
+   "p95_ms": 0.004824,
+   "p99_ms": 0.0050490000000000005,
+   "qps": 233868.89309852896,
+   "recall@1": 1.0,
+   "recall@10": 1.0,
+   "selectivity": 5e-05,
+   "strategies_used": {
+    "prefilter_exact": 2000
+   },
+   "strategy": "prefilter",
+   "system": "vdb",
+   "threshold": 1
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 200084.296,
+   "ef": 64,
+   "k": 10,
+   "label": "graph sel=0.000050",
+   "p50_ms": 90.014005,
+   "p95_ms": 337.973275,
+   "p99_ms": 547.5071820000001,
+   "qps": 7.525405193651284,
+   "recall@1": 1.0,
+   "recall@10": 1.0,
+   "selectivity": 5e-05,
+   "strategies_used": {
+    "filtered_index": 2000
+   },
+   "strategy": "graph",
+   "system": "vdb",
+   "threshold": 1
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 1558.191,
+   "ef": 64,
+   "k": 10,
+   "label": "postfilter sel=0.000050",
+   "p50_ms": 0.161469,
+   "p95_ms": 0.24876199999999998,
+   "p99_ms": 0.281348,
+   "qps": 6005.704530459667,
+   "recall@1": 0.0,
+   "recall@10": 0.0,
+   "selectivity": 5e-05,
+   "strategies_used": {
+    "post_filter": 2000
+   },
+   "strategy": "postfilter",
+   "system": "vdb",
+   "threshold": 1
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 1679.0,
+   "ef": 64,
+   "k": 10,
+   "label": "planner sel=0.008395",
+   "p50_ms": 0.055618999999999995,
+   "p95_ms": 0.078226,
+   "p99_ms": 0.121875,
+   "qps": 16991.194517335724,
+   "recall@1": 1.0,
+   "recall@10": 1.0,
+   "selectivity": 0.008395,
+   "strategies_used": {
+    "prefilter_exact": 2000
+   },
+   "strategy": "planner",
+   "system": "vdb",
+   "threshold": 10
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 1679.0,
+   "ef": 64,
+   "k": 10,
+   "label": "prefilter sel=0.008395",
+   "p50_ms": 0.053345,
+   "p95_ms": 0.087926,
+   "p99_ms": 0.12486299999999999,
+   "qps": 17054.048817078306,
+   "recall@1": 1.0,
+   "recall@10": 1.0,
+   "selectivity": 0.008395,
+   "strategies_used": {
+    "prefilter_exact": 2000
+   },
+   "strategy": "prefilter",
+   "system": "vdb",
+   "threshold": 10
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 40978.391,
+   "ef": 64,
+   "k": 10,
+   "label": "graph sel=0.008395",
+   "p50_ms": 7.523572,
+   "p95_ms": 16.425801,
+   "p99_ms": 19.958447,
+   "qps": 120.42509646717383,
+   "recall@1": 1.0,
+   "recall@10": 1.0,
+   "selectivity": 0.008395,
+   "strategies_used": {
+    "filtered_index": 2000
+   },
+   "strategy": "graph",
+   "system": "vdb",
+   "threshold": 10
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 1558.191,
+   "ef": 64,
+   "k": 10,
+   "label": "postfilter sel=0.008395",
+   "p50_ms": 0.185854,
+   "p95_ms": 0.258944,
+   "p99_ms": 0.375767,
+   "qps": 5264.365179915708,
+   "recall@1": 0.191,
+   "recall@10": 0.06650000000000007,
+   "selectivity": 0.008395,
+   "strategies_used": {
+    "post_filter": 2000
+   },
+   "strategy": "postfilter",
+   "system": "vdb",
+   "threshold": 10
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 6858.819,
+   "ef": 64,
+   "k": 10,
+   "label": "planner sel=0.106045",
+   "p50_ms": 0.79948,
+   "p95_ms": 1.745358,
+   "p99_ms": 2.231146,
+   "qps": 1125.3100013838275,
+   "recall@1": 1.0,
+   "recall@10": 0.9984999999999997,
+   "selectivity": 0.106045,
+   "strategies_used": {
+    "filtered_index": 2000
+   },
+   "strategy": "planner",
+   "system": "vdb",
+   "threshold": 100
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 21209.0,
+   "ef": 64,
+   "k": 10,
+   "label": "prefilter sel=0.106045",
+   "p50_ms": 1.38924,
+   "p95_ms": 1.720543,
+   "p99_ms": 2.202425,
+   "qps": 696.0002079091821,
+   "recall@1": 1.0,
+   "recall@10": 1.0,
+   "selectivity": 0.106045,
+   "strategies_used": {
+    "prefilter_exact": 2000
+   },
+   "strategy": "prefilter",
+   "system": "vdb",
+   "threshold": 100
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 6858.819,
+   "ef": 64,
+   "k": 10,
+   "label": "graph sel=0.106045",
+   "p50_ms": 0.795559,
+   "p95_ms": 1.689543,
+   "p99_ms": 2.193474,
+   "qps": 1148.642107519901,
+   "recall@1": 1.0,
+   "recall@10": 0.9984999999999997,
+   "selectivity": 0.106045,
+   "strategies_used": {
+    "filtered_index": 2000
+   },
+   "strategy": "graph",
+   "system": "vdb",
+   "threshold": 100
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 1558.191,
+   "ef": 64,
+   "k": 10,
+   "label": "postfilter sel=0.106045",
+   "p50_ms": 0.229799,
+   "p95_ms": 0.2845,
+   "p99_ms": 0.345491,
+   "qps": 4322.255267736721,
+   "recall@1": 0.867,
+   "recall@10": 0.6265999999999996,
+   "selectivity": 0.106045,
+   "strategies_used": {
+    "post_filter": 2000
+   },
+   "strategy": "postfilter",
+   "system": "vdb",
+   "threshold": 100
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 1913.845,
+   "ef": 64,
+   "k": 10,
+   "label": "planner sel=0.518790",
+   "p50_ms": 0.49748000000000003,
+   "p95_ms": 0.676697,
+   "p99_ms": 0.8792840000000001,
+   "qps": 2012.585810017406,
+   "recall@1": 0.999,
+   "recall@10": 0.9914999999999988,
+   "selectivity": 0.51879,
+   "strategies_used": {
+    "filtered_index": 2000
+   },
+   "strategy": "planner",
+   "system": "vdb",
+   "threshold": 500
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 103758.0,
+   "ef": 64,
+   "k": 10,
+   "label": "prefilter sel=0.518790",
+   "p50_ms": 4.71169,
+   "p95_ms": 5.516083,
+   "p99_ms": 6.805078,
+   "qps": 207.477213493957,
+   "recall@1": 1.0,
+   "recall@10": 1.0,
+   "selectivity": 0.51879,
+   "strategies_used": {
+    "prefilter_exact": 2000
+   },
+   "strategy": "prefilter",
+   "system": "vdb",
+   "threshold": 500
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 1913.845,
+   "ef": 64,
+   "k": 10,
+   "label": "graph sel=0.518790",
+   "p50_ms": 0.45742299999999997,
+   "p95_ms": 0.606909,
+   "p99_ms": 0.7569,
+   "qps": 2106.901240342241,
+   "recall@1": 0.999,
+   "recall@10": 0.9914999999999988,
+   "selectivity": 0.51879,
+   "strategies_used": {
+    "filtered_index": 2000
+   },
+   "strategy": "graph",
+   "system": "vdb",
+   "threshold": 500
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 1558.191,
+   "ef": 64,
+   "k": 10,
+   "label": "postfilter sel=0.518790",
+   "p50_ms": 0.429375,
+   "p95_ms": 0.495523,
+   "p99_ms": 0.589885,
+   "qps": 2323.427945069572,
+   "recall@1": 0.992,
+   "recall@10": 0.9713999999999983,
+   "selectivity": 0.51879,
+   "strategies_used": {
+    "post_filter": 2000
+   },
+   "strategy": "postfilter",
+   "system": "vdb",
+   "threshold": 500
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 1108.613,
+   "ef": 64,
+   "k": 10,
+   "label": "planner sel=1.000000",
+   "p50_ms": 0.585952,
+   "p95_ms": 0.6426449999999999,
+   "p99_ms": 0.82532,
+   "qps": 1687.9895133719003,
+   "recall@1": 0.993,
+   "recall@10": 0.9807999999999979,
+   "selectivity": 1.0,
+   "strategies_used": {
+    "filtered_index": 2000
+   },
+   "strategy": "planner",
+   "system": "vdb",
+   "threshold": 1000
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 200000.0,
+   "ef": 64,
+   "k": 10,
+   "label": "prefilter sel=1.000000",
+   "p50_ms": 6.261214,
+   "p95_ms": 7.388671,
+   "p99_ms": 9.369261,
+   "qps": 156.0105850592187,
+   "recall@1": 1.0,
+   "recall@10": 1.0,
+   "selectivity": 1.0,
+   "strategies_used": {
+    "prefilter_exact": 2000
+   },
+   "strategy": "prefilter",
+   "system": "vdb",
+   "threshold": 1000
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 1108.613,
+   "ef": 64,
+   "k": 10,
+   "label": "graph sel=1.000000",
+   "p50_ms": 0.360279,
+   "p95_ms": 0.6287499999999999,
+   "p99_ms": 0.667876,
+   "qps": 2247.0112604340475,
+   "recall@1": 0.993,
+   "recall@10": 0.9807999999999979,
+   "selectivity": 1.0,
+   "strategies_used": {
+    "filtered_index": 2000
+   },
+   "strategy": "graph",
+   "system": "vdb",
+   "threshold": 1000
+  },
+  {
+   "correlated": true,
+   "dataset": "sift",
+   "dist_comps": 1558.191,
+   "ef": 64,
+   "k": 10,
+   "label": "postfilter sel=1.000000",
+   "p50_ms": 0.639619,
+   "p95_ms": 0.697397,
+   "p99_ms": 0.805956,
+   "qps": 1559.4659955523468,
+   "recall@1": 0.999,
+   "recall@10": 0.9926999999999989,
+   "selectivity": 1.0,
+   "strategies_used": {
+    "post_filter": 2000
+   },
+   "strategy": "postfilter",
+   "system": "vdb",
+   "threshold": 1000
+  }
+ ]
+}

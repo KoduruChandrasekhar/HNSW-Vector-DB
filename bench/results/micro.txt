@@ -1,0 +1,45 @@
+------------------------------------------------------------------------------
+Benchmark                    Time             CPU   Iterations UserCounters...
+------------------------------------------------------------------------------
+BM_TopK/10              128939 ns       128940 ns         1671 items_per_second=508.266M/s
+BM_TopK/100             150569 ns       150519 ns         1909 items_per_second=435.4M/s
+BM_PqScan/8            1076217 ns      1076212 ns          343 items_per_second=92.9185M/s
+BM_PqScan/16           1814036 ns      1813905 ns          217 items_per_second=55.1297M/s
+BM_PqScan/32           2250895 ns      2250733 ns          143 items_per_second=44.43M/s
+BM_PqScan/64           3372985 ns      3372995 ns           88 items_per_second=29.6472M/s
+BM_L2/scalar/100           113 ns          113 ns      1891908 bytes_per_second=3.28335Gi/s
+BM_L2/scalar/128           111 ns          111 ns      2762739 bytes_per_second=4.29764Gi/s
+BM_L2/scalar/384           652 ns          652 ns       347399 bytes_per_second=2.19254Gi/s
+BM_L2/scalar/960          1803 ns         1803 ns       160866 bytes_per_second=1.98329Gi/s
+BM_Dot/scalar/100          120 ns          120 ns      2344342 bytes_per_second=3.09388Gi/s
+BM_Dot/scalar/128          127 ns          127 ns      2456520 bytes_per_second=3.75312Gi/s
+BM_Dot/scalar/384          859 ns          859 ns       430176 bytes_per_second=1.66619Gi/s
+BM_Dot/scalar/960         1866 ns         1866 ns       226903 bytes_per_second=1.91672Gi/s
+BM_Sq8L2/scalar/100        133 ns          133 ns      2451165 bytes_per_second=718.325Mi/s
+BM_Sq8L2/scalar/128        137 ns          137 ns      2116605 bytes_per_second=893.822Mi/s
+BM_Sq8L2/scalar/384        482 ns          482 ns       516573 bytes_per_second=759.064Mi/s
+BM_Sq8L2/scalar/960       1172 ns         1172 ns       231595 bytes_per_second=781.074Mi/s
+BM_L2/avx2/100            13.9 ns         13.9 ns     19657203 bytes_per_second=26.8547Gi/s
+BM_L2/avx2/128            19.2 ns         19.2 ns     21635800 bytes_per_second=24.7955Gi/s
+BM_L2/avx2/384            60.2 ns         60.2 ns      6956151 bytes_per_second=23.7544Gi/s
+BM_L2/avx2/960             288 ns          288 ns      1104282 bytes_per_second=12.3998Gi/s
+BM_Dot/avx2/100           15.6 ns         15.6 ns     18199386 bytes_per_second=23.8577Gi/s
+BM_Dot/avx2/128           14.3 ns         14.3 ns     19984720 bytes_per_second=33.2503Gi/s
+BM_Dot/avx2/384           56.5 ns         56.5 ns      6518638 bytes_per_second=25.3094Gi/s
+BM_Dot/avx2/960            309 ns          309 ns       987491 bytes_per_second=11.573Gi/s
+BM_Sq8L2/avx2/100         24.0 ns         24.0 ns     16504828 bytes_per_second=3.87702Gi/s
+BM_Sq8L2/avx2/128         18.8 ns         18.8 ns     15084278 bytes_per_second=6.35086Gi/s
+BM_Sq8L2/avx2/384         51.4 ns         51.4 ns      5915763 bytes_per_second=6.95514Gi/s
+BM_Sq8L2/avx2/960          123 ns          123 ns      2372807 bytes_per_second=7.26535Gi/s
+BM_L2/avx512/100          13.1 ns         13.1 ns     24120015 bytes_per_second=28.4331Gi/s
+BM_L2/avx512/128          15.0 ns         15.0 ns     20131901 bytes_per_second=31.7205Gi/s
+BM_L2/avx512/384          52.8 ns         52.8 ns      5762814 bytes_per_second=27.0892Gi/s
+BM_L2/avx512/960           227 ns          227 ns       908817 bytes_per_second=15.7288Gi/s
+BM_Dot/avx512/100         11.9 ns         11.9 ns     21310604 bytes_per_second=31.3384Gi/s
+BM_Dot/avx512/128         14.9 ns         14.9 ns     16665175 bytes_per_second=31.9224Gi/s
+BM_Dot/avx512/384         55.4 ns         55.4 ns      5477391 bytes_per_second=25.8161Gi/s
+BM_Dot/avx512/960          279 ns          279 ns      1060112 bytes_per_second=12.8315Gi/s
+BM_Sq8L2/avx512/100       13.1 ns         13.1 ns     18899426 bytes_per_second=7.12383Gi/s
+BM_Sq8L2/avx512/128       19.0 ns         19.0 ns     19624257 bytes_per_second=6.26722Gi/s
+BM_Sq8L2/avx512/384       35.7 ns         35.7 ns      6636963 bytes_per_second=10.0141Gi/s
+BM_Sq8L2/avx512/960        105 ns          105 ns      3400664 bytes_per_second=8.49316Gi/s
