@@ -78,7 +78,7 @@ jobs:
 
   macos:
     name: macOS (NEON kernels, Python package)
-    runs-on: macos-14
+    runs-on: macos-latest  # Apple Silicon (arm64); macos-14 images are retired
     steps:
       - uses: actions/checkout@v4
       - run: brew install ninja
